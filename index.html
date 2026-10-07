@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D MOTION LOGISTICS VENTURE | Freelance Shoe Seller</title>
+<meta name="description" content="D Motion Logistics Venture - quality shoes, delivered with care.">
+<style>
+  :root{
+    --navy:#0f1b2d;
+    --navy-2:#16263d;
+    --accent:#c8a25c;
+    --bg:#f7f6f3;
+    --card:#ffffff;
+    --text:#1c2430;
+    --muted:#6b7482;
+    --line:#e4e1da;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+
+  /* Navigation */
+  header{position:sticky;top:0;z-index:10;background:rgba(15,27,45,.96);backdrop-filter:blur(6px)}
+  nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding:16px 24px;max-width:1100px;margin:0 auto}
+  .logo{color:#fff;font-weight:800;letter-spacing:.14em;font-size:.9rem}
+  .logo span{color:var(--accent)}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav ul a{color:#cfd6e0;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;transition:color .2s}
+  nav ul a:hover{color:var(--accent)}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:140px 0 120px}
+  .eyebrow{color:var(--accent);letter-spacing:.3em;font-size:.75rem;text-transform:uppercase;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.6rem,8vw,6rem);line-height:1;font-weight:800;letter-spacing:-.02em;max-width:900px}
+  .hero h1 em{font-style:normal;color:var(--accent)}
+  .tagline{margin-top:28px;font-size:1.2rem;color:#b9c3d1;max-width:520px}
+  .btn{display:inline-block;margin-top:40px;padding:14px 34px;background:var(--accent);color:var(--navy);font-weight:700;letter-spacing:.1em;font-size:.8rem;text-transform:uppercase;transition:transform .2s,background .2s}
+  .btn:hover{background:#dbb771;transform:translateY(-2px)}
+
+  /* Sections */
+  section{padding:110px 0}
+  .label{color:var(--accent);letter-spacing:.3em;font-size:.75rem;text-transform:uppercase;margin-bottom:12px}
+  h2{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+  .sub{color:var(--muted);margin-top:14px;max-width:480px}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:48px}
+  .portrait{aspect-ratio:4/5;background:linear-gradient(160deg,#d9d4c7,#b9b2a0);display:flex;align-items:center;justify-content:center;color:#6f6a5c;letter-spacing:.2em;font-size:.75rem;text-transform:uppercase}
+  .about-text p{color:#444c59;margin-bottom:18px}
+  .stats{display:flex;gap:40px;margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+  .stats strong{display:block;font-size:2rem;color:var(--navy)}
+  .stats span{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+
+  /* Gallery */
+  .gallery-bg{background:#fff}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+  .item{background:var(--card);border:1px solid var(--line);overflow:hidden;transition:transform .25s,box-shadow .25s}
+  .item:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(15,27,45,.12)}
+  .img{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:3.5rem;color:rgba(255,255,255,.85)}
+  .g1{background:linear-gradient(135deg,#1f3250,#0f1b2d)}
+  .g2{background:linear-gradient(135deg,#c8a25c,#9c7b3c)}
+  .g3{background:linear-gradient(135deg,#6b7482,#3d4654)}
+  .g4{background:linear-gradient(135deg,#2c4a6e,#16263d)}
+  .g5{background:linear-gradient(135deg,#d9d4c7,#b0a894)}
+  .g6{background:linear-gradient(135deg,#3d4654,#1c2430)}
+  .caption{padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+  .caption h3{font-size:1rem;color:var(--navy)}
+  .caption small{color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-size:.7rem}
+
+  /* Contact */
+  .contact{background:var(--navy);color:#fff}
+  .contact h2{color:#fff}
+  .contact .sub{color:#b9c3d1}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+  .card{border:1px solid rgba(255,255,255,.15);padding:32px;transition:border-color .2s}
+  .card:hover{border-color:var(--accent)}
+  .card small{display:block;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;margin-bottom:10px}
+  .card a,.card p{font-size:1.1rem;word-break:break-word}
+
+  footer{background:#0a1320;color:#7d889a;text-align:center;padding:28px 24px;font-size:.8rem;letter-spacing:.08em}
+
+  @media(max-width:860px){
+    .about-grid{grid-template-columns:1fr;gap:36px}
+    .grid,.cards{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:560px){
+    section{padding:80px 0}
+    .hero{padding:90px 0 80px}
+    .grid,.cards{grid-template-columns:1fr}
+    nav ul{gap:14px}
+    .stats{gap:24px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#home" class="logo">D MOTION <span>LOGISTICS</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#shoes">Shoes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="hero" id="home">
+    <div class="wrap">
+      <p class="eyebrow">Freelance Shoe Seller</p>
+      <h1>D MOTION <em>LOGISTICS</em> VENTURE</h1>
+      <p class="tagline">Step into style. Quality footwear, delivered right to your door.</p>
+      <a href="#shoes" class="btn">View Collection</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <p class="label">About Me</p>
+      <h2>Footwear with purpose.</h2>
+      <p class="sub">Reliable sourcing. Honest prices. Fast delivery.</p>
+      <div class="about-grid">
+        <div class="portrait">Your Photo Here</div>
+        <div class="about-text">
+          <p>I'm the founder of D Motion Logistics Venture, a freelance shoe business built on trust, quality and convenience. I source durable, stylish footwear for men, women and kids, and I make sure every pair reaches you safely and on time.</p>
+          <p>Whether you need sneakers for everyday wear, formal shoes for the office or sandals for the weekend, I'll help you find the right fit at the right price.</p>
+          <div class="stats">
+            <div><strong>500+</strong><span>Pairs Sold</span></div>
+            <div><strong>300+</strong><span>Happy Clients</span></div>
+            <div><strong>24h</strong><span>Fast Delivery</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="shoes" class="gallery-bg">
+    <div class="wrap">
+      <p class="label">Gallery</p>
+      <h2>Shoe Collection</h2>
+      <p class="sub">A selection of what's available. Replace the placeholders with your own photos.</p>
+      <div class="grid">
+        <article class="item"><div class="img g1">👟</div><div class="caption"><h3>Classic Sneakers</h3><small>Casual</small></div></article>
+        <article class="item"><div class="img g2">👞</div><div class="caption"><h3>Formal Oxfords</h3><small>Office</small></div></article>
+        <article class="item"><div class="img g3">🥾</div><div class="caption"><h3>Rugged Boots</h3><small>Outdoor</small></div></article>
+        <article class="item"><div class="img g4">👟</div><div class="caption"><h3>Running Trainers</h3><small>Sport</small></div></article>
+        <article class="item"><div class="img g5">👡</div><div class="caption"><h3>Ladies' Sandals</h3><small>Women</small></div></article>
+        <article class="item"><div class="img g6">👞</div><div class="caption"><h3>Leather Loafers</h3><small>Smart</small></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <p class="label">Contact</p>
+      <h2>Let's get you a great pair.</h2>
+      <p class="sub">Reach out to place an order or ask about sizes, prices and delivery.</p>
+      <div class="cards">
+        <div class="card"><small>Phone</small><a href="tel:08069834251">0806 983 4251</a></div>
+        <div class="card"><small>Email</small><a href="mailto:info@dmotionlogistics.com">info@dmotionlogistics.com</a></div>
+        <div class="card"><small>Business</small><p>D Motion Logistics Venture</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; 2026 D MOTION LOGISTICS VENTURE. ALL RIGHTS RESERVED.</footer>
+
+</body>
+</html>
